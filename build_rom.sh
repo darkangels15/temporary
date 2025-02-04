@@ -5,13 +5,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-brunch jasmine_sprout-userdebug
-lunch lineage_jasmine_sprout-userdebug
+lunch aosp_topaz-ap4a-buildtype
 WITH_GMS=true
-RISING_CHIPSET=sdm660
-RISING_MAINTAINER=dArkAngelS
-TARGET_ENABLE_BLUR=true
-RISING_PACKAGE_TYPE=AOSP
 export TZ=Asia/Jakarta #put before last build command
 mka bacon 
 
